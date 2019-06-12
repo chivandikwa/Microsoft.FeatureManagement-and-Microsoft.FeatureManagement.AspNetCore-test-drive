@@ -1,0 +1,30 @@
+﻿@using FeatureManagementRecipes.Features
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureA)>
+        <h1>This is only available if FeatureA is enabled</h1>
+    </feature>
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureB)>
+        <h1>This is only available if FeatureB is enabled</h1>
+    </feature>
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureC)>
+        <h1>This is only available if FeatureC is enabled</h1>
+    </feature>
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureD)>
+        <h1>This is only available if FeatureD is enabled</h1>
+    </feature>
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureE)>
+        <h1>This is only available if FeatureE is enabled</h1>
+    </feature>  
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureF)>
+        <h1>This is only available if FeatureF is enabled</h1>
+    </feature> 
+    <feature name=@nameof(ApplicationFeatureFlags.FeatureG)>
+        <h1>This is only available if FeatureG is enabled (50%)</h1>
+    </feature>
+</div>
