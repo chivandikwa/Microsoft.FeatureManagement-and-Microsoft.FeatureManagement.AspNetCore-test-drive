@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using FeatureManagementRecipes.Models;
 
 using Microsoft.FeatureManagement;
+using Microsoft.FeatureManagement.Mvc;
 
 namespace FeatureManagementRecipes.Controllers
 {
-    [Feature(ApplicationFeatureFlags.FeatureA)]
+    [FeatureGate(ApplicationFeatureFlags.FeatureA)]
     public class HomeController : Controller
     {
         // Use IFeatureManager if you want features to reflect updates to IConfiguration
@@ -41,7 +42,7 @@ namespace FeatureManagementRecipes.Controllers
             return View();
         }
 
-        [Feature(ApplicationFeatureFlags.FeatureB)]
+        [FeatureGate(ApplicationFeatureFlags.FeatureB)]
         public IActionResult Privacy()
         {
             if (_featureManager.IsEnabled(nameof(ApplicationFeatureFlags.FeatureC)))
