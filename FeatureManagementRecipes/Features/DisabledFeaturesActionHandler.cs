@@ -15,7 +15,7 @@ namespace FeatureManagementRecipes.Features
             Action<IEnumerable<string>, ActionExecutingContext> handler)
         {
             Action<IEnumerable<string>, ActionExecutingContext> action = handler;
-            _handler = action ?? throw new ArgumentNullException(nameof (handler));
+            _handler = action ?? throw new ArgumentNullException(nameof(handler));
         }
 
         public Task HandleDisabledFeatures(IEnumerable<string> disabledFeatures, ActionExecutingContext context)
