@@ -64,7 +64,7 @@ namespace FeatureManagementRecipes
             app.UseMvc(routes =>
             {
                 // Routes can dynamically be added or removed based on the toggling of feature states
-                routes.MapRouteForFeature(nameof(ApplicationFeatureFlags.FeatureB), "betaDefault" ,
+                routes.MapRouteForFeature(nameof(ApplicationFeatureFlags.FeatureB), "betaDefault",
                                           "{controller=Beta}/{action=Index}/{id?}", null, null, null);
 
                 routes.MapRoute(
