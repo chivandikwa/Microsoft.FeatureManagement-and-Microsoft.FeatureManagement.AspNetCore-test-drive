@@ -7,7 +7,7 @@ using Microsoft.FeatureManagement.Mvc;
 
 namespace FeatureManagementRecipes.Features
 {
-    internal class DisabledFeaturesRedirectHandler: IDisabledFeaturesHandler
+    internal class DisabledFeaturesRedirectHandler : IDisabledFeaturesHandler
     {
         private readonly string _redirectUri;
 
